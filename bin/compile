@@ -78,6 +78,7 @@ curl --silent --max-time 60 --location $PHP_URL | tar xz
 # WordPress
 echo "-----> Installing WordPress v${WORDPRESS_VERSION}"
 cd ${BUILD_DIR}
+git checkout master
 curl --silent --max-time 60 --location $WORDPRESS_URL | tar xz
 
 cp -rf public/* wordpress/
